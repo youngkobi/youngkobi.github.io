@@ -1,37 +1,75 @@
 // template_19ibfsf
 // service_3jsm6xu
 // yXl6r0m8BDfViRVZl
+let contrastToggle = false;
+const scaleFactor = 1/20
+
+function moveBackground(event) {
+    const shapes = document.querySelectorAll(' .shape')
+    const x = event.clientX *scaleFactor;
+    const y = event.clientY *scaleFactor;
+
+
+    for (let i = 0; i < shapes.length; ++i){
+        const isOdd = i % 2 !==0;
+        const boolInt = isOdd ? -1 :1;
+        shapes[i].style.transform = `translate(${x *boolInt}px,${y *boolInt}px)`
+    }
+
+
+}
+
+
+
+
+function toggleContrast(){
+    contrastToggle = !contrastToggle
+    if (contrastToggle){
+    document.body.classList += " dark-theme"
+    }
+    else{
+        document.body.classList.remove("dark-theme")
+    }
+}
+
+
+
+
 
 function contact(event) {
   event.preventDefault();
 
-//   const loading = document.querySelector(" .modal__overlay--loading");
-//   const success = document.querySelector(" .modal__overlay--success");
-//   loading.classList += " modal__overlay--visible";
+  const loading = document.querySelector(" .modal__overlay--loading");
+  const success = document.querySelector(" .modal__overlay--success");
+  loading.classList += " modal__overlay--visible";
 
-  emailjs.sendForm("service_8w7tgna","template_zh4wsjj",event.target,"p_k6wgxj-cOpGXZDU")
+  emailjs
+    .sendForm(
+      "service_o1jaa1k",
+      "template_rl6z85j",
+      event.target,
+      "eRifnSxXM6LoiD97C"
+    )
     .then((result) => {
-        console.log('success',result.text);
-    }, (error) => { 
-        console.log('error', error);
+      loading.classList.remove("modal__overlay--visible");
+      success.classList += " modal__overlay--visible";
+    })
+    .catch(() => {
+      loading.classList.remove("modal__overlay--visible");
+      alert(
+        "the email service is temporialirily unavialibe. Please contact me directly on JHardyit@yahoo.com "
+      );
     });
-}    
- /*I PREVIOUSLY HAD EVERYTHING COMMENTED OUT IN THE FUNCTION BUT WHEN 
- I STOPPED WORKING I TRIED CONTACTING THE ai FOR SOLUTIONS SO THATS WHAT I HAVE ABOVE AND 
- ABOVE CODE WORKS IN THE CONLSE I BE RECIEVEING THE SUCCESS IN THE LOGS BUT I HAVE NEVER RECIEVED AN EMAIL
- AS WELL AS WHEN I DID HAVE EVERYTHING FROM THE VIDEO I THE FUNCTION I NEVER RECIEVED AN EMAIL 
- AND IT WOULD LOAD CORRECTLY BUT I WOULD GET ERRORS LIKE 412 OR PREREQUISTES DONT MATCH AND OF SORTS
- SO IF YOU RUN THIS CODE AND IT WORKS JUST KNOW THIS SPECIFIC CODE WOULD WORK
- FOR ME TO BUT I STILL DONT GET EMAILS SO MAYBE IT IS EMAIL js THAT IS BUGGED 
+}
 
-*/
-    //   loading.classList.remove("modal__overlay--visible");
-    //   success.classList += " modal__overlay--visible";
-    // })
-    // .catch(() => {
-    //   loading.classList.remove("modal__overlay--visible");
-    //   alert(
-    //     "the email service is temporialirily unavialibe. Please contact me directly on JHardyit@yahoo.com "
-    //   );
-    // });
-// }
+let isModalOpen = false;
+
+function toggleModal() {
+    if (isModalOpen) {
+   isModalOpen =false;
+        return document.body.classList.remove("modal--open")
+    }
+    isModalOpen = true;
+    document.body.classList += " modal--open";
+    
+}
