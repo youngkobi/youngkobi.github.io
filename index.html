@@ -7,18 +7,20 @@
     <link rel="stylesheet" href="./style.css" />
     <script
       src="https://kit.fontawesome.com/3130a24b79.js"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
     <script src="index.js" defer></script>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "eRifnSxXM6LoiD97C",
-      });
-   })();
-</script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "eRifnSxXM6LoiD97C",
+        });
+      })();
+    </script>
   </head>
   <body>
     <section id="landing-page" onmousemove="moveBackground(event)">
@@ -27,7 +29,7 @@
           <img id="personal__logo" src="./assets/Kobi Prof Logo.png" alt="" />
         </figure>
         <ul class="nav__link--list">
-          <li class="nav__link"onclick="toggleModal()">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -66,7 +68,8 @@
             passion for building websites applications with great user
             experinces
             <br />
-            Here's a bit more <b class="red click" onclick="toggleModal()">about me</b>
+            Here's a bit more
+            <b class="red click" onclick="toggleModal()">about me</b>
           </p>
           <div class="social__list">
             <a
@@ -91,91 +94,121 @@
         </div>
       </header>
       <a href="#">
-      <button class="mail__btn click" onclick="toggleModal()">
-        <i class="fa-solid fa-envelope"></i>
-      </button>
-</a>
+        <button class="mail__btn click" onclick="toggleModal()">
+          <i class="fa-solid fa-envelope"></i>
+        </button>
+      </a>
       <a href="#project" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
-    
-    <div class="modal">
-      <div class="modal__half modal__about">
-        <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
-        <h4 class="modal__sub-title modal__sub-title--about"> Frontend Software Engineer</h4>
-        <p class="modal__para">
-          I'm a 22 year-old <b class="red">Frontend software engineer </b>with a strong passion in
-          devolping websites with great <b class="red">user experinces.</b>
-          <br />
-          I currently work on extermely difficult engineering problems and learn
-          from a team consisting of some of the most <b class="red">talented</b> and <b class="red">expereinces</b>
-          software engineers every day
-        </p>
-        <div class="modal__languages">
+
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">
+            Here's a bit about me.
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--about">
+            Frontend Software Engineer
+          </h4>
+          <p class="modal__para">
+            I'm a 22 year-old <b class="red">Frontend software engineer </b>with
+            a strong passion in devolping websites with great
+            <b class="red">user experinces.</b>
+            <br />
+            I currently work on extermely difficult engineering problems and
+            learn from a team consisting of some of the most
+            <b class="red">talented</b> and <b class="red">expereinces</b>
+            software engineers every day
+          </p>
+          <div class="modal__languages">
             <figure class="modal__language">
-                <img class="modal__language--img"src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png" alt="">
-            <span class="language__name"> HTML</span>
+              <img
+                class="modal__language--img"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                alt=""
+              />
+              <span class="language__name"> HTML</span>
             </figure>
             <figure class="modal__language">
-                <img class="modal__language--img"src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="">
-            <span class="language__name">CSS</span>
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+                alt=""
+              />
+              <span class="language__name">CSS</span>
             </figure>
             <figure class="modal__language">
-                <img class="modal__language--img"src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="">
-            <span class="language__name">JavaScript</span>
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+                alt=""
+              />
+              <span class="language__name">JavaScript</span>
             </figure>
             <figure class="modal__language">
-                <img class="modal__language--img"src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="">
-            <span class="language__name">React</span>
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
+                alt=""
+              />
+              <span class="language__name">React</span>
             </figure>
             <figure class="modal__language">
-                <img class="modal__language--img"src="./assets/Python-Emblem-1536x960.jpg" alt="">
-            <span class="language__name">Python</span>
+              <img
+                class="modal__language--img"
+                src="./assets/Python-Emblem-1536x960.jpg"
+                alt=""
+              />
+              <span class="language__name">Python</span>
             </figure>
+          </div>
+        </div>
+        <div class="modal__half modal__contact">
+          <i
+            class="fa-solid fa-xmark modal__exit click"
+            onclick="toggleModal()"
+          ></i>
+          <h3 class="modal__title modal__title--contact">Let's Have a chat!</h3>
+          <h4 class="modal__sub-title modal__sub-title--contact">
+            I'd love to hear from you
+          </h4>
+          <form id="contact__form" onsubmit="contact(event)">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input type="text" name="user_name" class="input" />
+            </div>
+
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+              <input type="email" name="user_email" class="input" />
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea type="text" name="message" class="input"></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">
+              Send it My Way
+            </button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fa-solid fa-spinner"></i>
+          </div>
+          <div class="modal__overlay--success modal__overlay">
+            Thanks for the message I will get back to you ASAP!
+          </div>
         </div>
       </div>
-      <div class="modal__half modal__contact">
-         <i class="fa-solid fa-xmark modal__exit click" onclick="toggleModal()"></i>
-        <h3 class="modal__title modal__title--contact"> Let's Have a chat!</h3>
-    <h4 class="modal__sub-title modal__sub-title--contact">I'd love to hear from you</h4>
-    <form id="contact__form" onsubmit="contact(event)">
-<div class="form__item">
-    <label class="form__item--label">Name</label>
-    <input type="text" name="user_name"class="input" ></input>
-
-</div>
-<div class="form__item">
-    <label class="form__item--label">Email</label>
-    <input type="email" name="user_email"class="input" ></input>
-
-</div>
-<div class="form__item">
-    <label class="form__item--label">Message</label>
-    <textarea type="text" name="message"class="input" ></textarea>
-
-</div>
-<button id='contact__submit' class="form__submit"> Send it My Way</button>
-    </form>
-    <div class="modal__overlay modal__overlay--loading">
-        <i class="fa-solid fa-spinner"></i>
-    </div>
-    <div class="modal__overlay--success modal__overlay">
-Thanks for the message I will get back to you ASAP!
-    </div>
-    </div>
-   
-    </div>
-<img src="./assets/semi circle.svg" class="shape shape--0" >
-<img src="assets/circle.svg" class="shape shape--1" >
-<img src="./assets/squiggly.svg" class="shape shape--2" >
-<img src="./assets/circle.svg" class="shape shape--3" >
-<img src="./assets/triangle.svg" class="shape shape--4" >
-<img src="./assets/circle.svg" class="shape shape--5" >
-<img src="./assets/squiggly.svg" class="shape shape--6" >
-<img src="./assets/circle.svg" class="shape shape--7" >
-<img src="./assets/semi circle.svg" class="shape shape--8" >
-   </section> 
-<section id="project">
+      <img src="./assets/semi circle.svg" class="shape shape--0" />
+      <img src="assets/circle.svg" class="shape shape--1" />
+      <img src="./assets/squiggly.svg" class="shape shape--2" />
+      <img src="./assets/circle.svg" class="shape shape--3" />
+      <img src="./assets/triangle.svg" class="shape shape--4" />
+      <img src="./assets/circle.svg" class="shape shape--5" />
+      <img src="./assets/squiggly.svg" class="shape shape--6" />
+      <img src="./assets/circle.svg" class="shape shape--7" />
+      <img src="./assets/semi circle.svg" class="shape shape--8" />
+    </section>
+    <section id="project">
       <div class="container">
         <div class="row">
           <h1 class="section__title">
@@ -185,23 +218,23 @@ Thanks for the message I will get back to you ASAP!
             <li class="project">
               <div class="project__wrapper">
                 <img
-                  src="./assets/blinker mockup.png"
+                  src="./assets/Final Project picture.png"
                   alt=""
                   class="project__img"
                 />
                 <div class="project__wrapper--bg"></div>
                 <div class="project__description">
                   <h3 class="project__description--title">
-                    Car Sales Projects
+                    Example Template Project
                   </h3>
                   <h4 class="project__description--sub-title">
                     HTML, CSS, JavaScript
                   </h4>
                   <p class="project__description--para">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Laborum ratione delectus numquam labore impedit animi harum
-                    quam. Tenetur molestiae esse quia ullam. Obcaecati, quisquam
-                    nam.
+                    "This is an in-depth project I created to showcase my skills
+                    in website development. It highlights my ability to design,
+                    build, and implement functional and visually appealing
+                    websites from the ground up."
                   </p>
                   <div class="project__description--links">
                     <a href="#" class="project__description--link">
@@ -214,6 +247,38 @@ Thanks for the message I will get back to you ASAP!
                 </div>
               </div>
             </li>
+            <!-- <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/Final Project picture.png"
+                  alt=""
+                  class="project__img"
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    Example Template Project
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    HTML, CSS, JavaScript
+                  </h4>
+                  <p class="project__description--para">
+                    "This is an in-depth project I created to showcase my skills
+                    in website development. It highlights my ability to design,
+                    build, and implement functional and visually appealing
+                    websites from the ground up."
+                  </p>
+                  <div class="project__description--links">
+                    <a href="#" class="project__description--link">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" class="project__description--link">
+                      <i class="fa-solid fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -244,7 +309,8 @@ Thanks for the message I will get back to you ASAP!
               Linkedin
             </a>
             <a
-              href="#" onclick="toggleModal()"
+              href="#"
+              onclick="toggleModal()"
               class="footer__social--link link__hover-effect--white link__hover-effect"
             >
               Contact
